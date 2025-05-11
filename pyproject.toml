@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "learn-llm-finetuning-rag"
+version = "0.1.0"
+description = ""
+authors = ["yuuta"]
+readme = "readme.txt"
+packages = [
+    {include = "chap1"},
+    {include = "chap2"},
+    {include = "chap3"},
+    {include = "chap4"},
+    {include = "chap5"},
+    {include = "chap6"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.8.8"
+accelerate = "^0.25.0"
+chainlit = "^1.0.0"
+datasets = "^2.10.1"
+faiss-cpu = "^1.7.4"
+html2text = "^2020.1.16"
+janome = "^0.4.1"
+langchain = "^0.1.14"
+langchain-community = "^0.0.31"
+langchain-core = "^0.1.40"
+langchain-openai = "^0.0.3"
+langchain-text-splitters = "^0.0.1"
+peft = "^0.7.1"
+rank-bm25 = "^0.2.2"
+sentence-transformers = "^2.2.2"
+sentencepiece = "^0.1.96"
+torch = "^2.1.2+cu118"
+transformers = "^4.34.0"
+unstructured = "^0.11.8"
+wikipedia = "^1.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

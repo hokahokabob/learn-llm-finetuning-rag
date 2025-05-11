@@ -1,0 +1,15 @@
+# -*- coding: sjis -*-
+
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model_id = "cyberagent/open-calm-small"
+
+model = AutoModelForCausalLM.from_pretrained(model_id)
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+
+input = tokenizer("“Œ‹ž‚Í“ú–{‚Ì", return_tensors="pt")
+tokens = model.generate(**input,max_new_tokens=30)
+
+output = tokenizer.decode(tokens[0], skip_special_tokens=True) 
+print(output)
