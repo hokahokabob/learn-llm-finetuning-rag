@@ -21,8 +21,8 @@ class MyDataset(Dataset):
     def __init__(self, filename, tokenizer):
         self.tokenizer = tokenizer
         self.features = []
-        with open(filename,'r') as f:
-            lines =  f.read().split('\n')
+        with open(filename, 'r') as f:
+            lines = f.read().split('\n')
             for line in lines:
                 input_ids = self.tokenizer.encode(line,
                         padding='longest',
@@ -46,7 +46,7 @@ collator = DataCollatorForLanguageModeling(tokenizer, mlm=False)
 from torch.utils.data import DataLoader
 
 dataloader = DataLoader(train_dataset, batch_size=10,
-                        shuffle=True, collate_fn=collator)
+                        shuffle=True, collate_fn=collator) # memo: 「バッチの処理」と「labelsの生成」を遂行してくれるらしい
 
 # ------------------------------
 # Trainer の設定
@@ -56,7 +56,7 @@ from transformers import Trainer, TrainingArguments
 
 training_args = TrainingArguments(
     output_dir='./output',
-    num_train_epochs=10,
+    num_train_epochs=10,  # 学習エポック数：この回数だけ学習を繰り返す
     per_device_train_batch_size=10,
 )
 

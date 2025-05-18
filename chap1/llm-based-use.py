@@ -8,15 +8,12 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model = AutoModelForCausalLM.from_pretrained(
-           "cyberagent/open-calm-small")
-tokenizer = AutoTokenizer.from_pretrained(
-           "cyberagent/open-calm-small")
+model = AutoModelForCausalLM.from_pretrained("cyberagent/open-calm-small")
+tokenizer = AutoTokenizer.from_pretrained("cyberagent/open-calm-small")
 
 # --------------------------------------------------------------------
 # >>> input = tokenizer("“Œ‹ž‚Í“ú–{‚Ì", return_tensors="pt")
-# >>> tokens = model.generate(**input,
-#                   max_new_tokens=1,do_sample=False)
+# >>> tokens = model.generate(**input, max_new_tokens=1,do_sample=False)
 # ... Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
 # >>> tokenizer.decode(tokens[0][-1])
 # 'Žñ“s'

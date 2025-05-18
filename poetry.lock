@@ -2,13 +2,13 @@
 
 [[package]]
 name = "accelerate"
-version = "0.25.0"
+version = "0.26.1"
 description = "Accelerate"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "accelerate-0.25.0-py3-none-any.whl", hash = "sha256:c7bb817eb974bba0ff3ea1ba0f24d55afb86d50e3d4fe98d6922dc69cf2ccff1"},
-    {file = "accelerate-0.25.0.tar.gz", hash = "sha256:ecf55b0ab278a1dac8539dde0d276977aff04683f07ede73eaf02478538576a1"},
+    {file = "accelerate-0.26.1-py3-none-any.whl", hash = "sha256:04df826b84ac7bad8a0a8ab90e6aeacdecb1ea5a2d744d7e94f6735c29183227"},
+    {file = "accelerate-0.26.1.tar.gz", hash = "sha256:bf63716b6bd9460d87da970cf4d833abb824ca0aa633be36b741e63a1b504f89"},
 ]
 
 [package.dependencies]
@@ -5086,4 +5086,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.8"
-content-hash = "3dbfc881478d36b12e39e6e344abc0e0cb2ca6c783dc110e76b5847b73f2cfe9"
+content-hash = "2d5e33118757856dd35f64afa34bf685ed3238aa16bb3836ac444c78d2d636c5"
